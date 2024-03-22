@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a food delivery web application",
   "scripts": {
+    "start": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "yatharth",
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "@parcel/transformer-js": "^2.12.0",
+    "@parcel/transformer-react-refresh-wrap": "^2.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

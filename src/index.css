@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+.header{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    color: rgb(159 139 23);
+    border: solid rgb(159 139 23) 2px;
+}
+.header>.topLeft{
+    height: 15vh;
+    width: 30vw;
+}
+.header>.topLeft>img{
+    height: 100%;
+    width: max-content;
+    margin: 5px;
+    border: solid rgb(159 139 23) 2px;
+}
+.header>.topCenter{
+    height: 15vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+.header>.topRight{
+    height: 15vh;
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header>.topRight>h2:hover{
+    text-decoration: underline;
+    scale: 1.05;
+}
+
+.body{
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.searchField{
+    height: 10vh;
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.searchBar{
+    width: 78%;
+    margin: 3px;
+}
+.searchBtn{
+    width: 18%;
+}
+.meals{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    height: 20vh;
+    width: 80vw;
+    border: solid transparent 2px;
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    visibility: hidden;
+}
+.foodCard{
+    height: 18vh;
+    width: 18vh;
+    border-radius: 50% 50% 50% 50%;
+}
+.foodCard>img{
+    padding-top: 5px;
+    height: 18vh;
+    width: 18vh;    
+}
+
+.restaurant{
+    margin-top: 5px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: max-content;
+    width: 80vw;
+    border: solid transparent 2px;
+}
+.restaurantCard{
+    width: 20vw;
+    height: 30vh;
+    margin-top: 5px;
+}
+.restaurantCard>img{
+    width: 20vw;
+    height: 15vh;
+    object-fit: cover;
+    justify-content: stretch;
+    border-radius: 3%;
+}
+.cuisines{
+    width: 20vw;
+    text-align: left;
+    overflow: hidden;
+}
+.cuisines>p{
+    color: rgb(168, 168, 142);
+}
+.footer{
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:flex-start;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+.head{
+    width: 10vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
