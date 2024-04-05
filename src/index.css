@@ -123,6 +123,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items:flex-start;
+    padding-bottom: 5vh;
 }
 .contact{
     display: flex;
@@ -133,4 +134,32 @@
     height: max-content;
     display: flex;
     flex-direction: column;
+}
+
+.shimmer{
+    margin-top: 5px;
+    padding-top: 5px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: max-content;
+    width: 80vw;
+    border: solid transparent 2px;
+}
+.shimmerCard{
+    width: 20vw;
+    height: 30vh;
+    margin-top: 5px;
+    background-color: lightgray;
+    animation: shimmerCard infinite  ;
+    animation-duration: 2s;
+}
+
+@keyframes shimmerCard {
+    0%   {background-color: lightgray;}
+    25%  {background-color: rgb(183, 179, 179);}
+    50%  {background-color: rgb(190, 185, 185);}
+    100% {background-color: rgb(160, 158, 158);}
 }

@@ -1,17 +1,36 @@
 import { foods } from "../src/Constant";
-import { restaurant } from "../src/Constant";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
-const filterData = (inputText, restaurantData) => {
-  return restaurant.filter((restaurantData) =>
-    restaurantData.info.name.includes(inputText)
+const filterData = (inputText, allRestaurantData) => {
+  return allRestaurantData.filter((allRestaurantData) =>
+    allRestaurantData.info.name.includes(inputText)
   );
 };
 
+
+
 const Body = () => {
   const [inputText, SetInputText] = useState("");
-  const [restaurantData, SetRestaurantData] = useState(restaurant);
-  return (
+  const [allRestaurantData, SetAllRestaurantData] = useState([]);
+  const [fillteredRestaurantData, SetFillteredRestaurantData] = useState([]);
+
+  useEffect(() => {
+    getRestaurant();
+  }, []);
+
+  async function getRestaurant() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    const fetchRestaurant =
+      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+    SetAllRestaurantData(fetchRestaurant);
+    SetFillteredRestaurantData(fetchRestaurant);
+  }
+
+  return (fillteredRestaurantData.length===0)?<Shimmer/> : (
     <>
       <div className="body">
         <div className="searchField">
@@ -29,8 +48,8 @@ const Body = () => {
             value={"Search"}
             className="searchBtn"
             onClick={(e) => {
-              const data = filterData(inputText, restaurantData);
-              SetRestaurantData(data);
+              const data = filterData(inputText, allRestaurantData);
+              SetFillteredRestaurantData(data);
             }}
           ></input>
         </div>
@@ -51,8 +70,9 @@ const Body = () => {
           })}
         </div>
 
+        
         <div className="restaurant">
-          {restaurantData.map((e) => {
+          {fillteredRestaurantData.map((e) => {
             return (
               <div className="restaurantCard">
                 <img
@@ -72,4 +92,5 @@ const Body = () => {
     </>
   );
 };
+
 export default Body;
