@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Header =()=>{
     return(
         <>
@@ -9,9 +10,13 @@ const Header =()=>{
                     <h1>MEAL KINGS</h1>
                 </div>
                 <div className="topRight">
-                    <h2>HOME</h2>
-                    <h2>ABOUT</h2>
-                    <h2>CONTACT</h2>
+                    {/* <h2></h2>
+                    <h2></h2>
+                    <h2></h2>
+                     */}
+                    <h2><Link to={"/"} className="link">HOME</Link></h2>
+                    <h2><Link to={"/about"} className="link">ABOUT</Link></h2>
+                    <h2><Link to={"/contact"} className="link">CONTACT</Link></h2>
                 </div>
             </div>
         </>

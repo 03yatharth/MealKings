@@ -35,6 +35,9 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.header>.topRight>h2>.link{
+    color:rgb(159 139 23)
+}
 .header>.topRight>h2:hover{
     text-decoration: underline;
     scale: 1.05;
@@ -102,12 +105,19 @@
     height: 30vh;
     margin-top: 5px;
 }
-.restaurantCard>img{
+.restaurantCard>.link{
+    color: black;
+    text-decoration: none;
+}
+.restaurantCard>.link>img{
     width: 20vw;
     height: 15vh;
     object-fit: cover;
     justify-content: stretch;
     border-radius: 3%;
+}
+.restaurantCard>.link>img:hover{
+    scale: 1.04;
 }
 .cuisines{
     width: 20vw;
@@ -162,4 +172,45 @@
     25%  {background-color: rgb(183, 179, 179);}
     50%  {background-color: rgb(190, 185, 185);}
     100% {background-color: rgb(160, 158, 158);}
+}
+.menu{
+    margin: 2vh;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+    height: max-content;
+    border: solid 2px rgb(159 139 23);
+}
+.menu>.restaurantDetail{
+    display: flex;
+    padding: 5px;
+}
+.menu>.restaurantDetail>.restaurantDetail{
+    padding: 5px;
+    margin-top: 15px;
+}
+.menu>div>img{
+    padding-top: 5px;
+    height: 18vh;
+    width: 18vh; 
+    margin: 5px;
+}
+.menuItem{
+    color: black;
+}
+
+.aboutPage{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4vh;
+    padding: 5vh;
+}
+.aboutContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

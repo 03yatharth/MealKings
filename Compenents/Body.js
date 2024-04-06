@@ -1,14 +1,13 @@
 import { foods } from "../src/Constant";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const filterData = (inputText, allRestaurantData) => {
   return allRestaurantData.filter((allRestaurantData) =>
     allRestaurantData.info.name.includes(inputText)
   );
 };
-
-
 
 const Body = () => {
   const [inputText, SetInputText] = useState("");
@@ -75,15 +74,21 @@ const Body = () => {
           {fillteredRestaurantData.map((e) => {
             return (
               <div className="restaurantCard">
+                
+                <Link to = {"/restaurant/"+e.info.id}  className="link">
                 <img
                   src={
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
                     e.info.cloudinaryImageId
                   }
-                  alt="text"
+                  alt="image"
                 ></img>
+                </Link>
+                
+                <Link to = {"/restaurant/"+e.info.id}  className="link">
                 <h4>{e.info.name}</h4>
                 <h5>{e.info.locality}</h5>
+                </Link>
               </div>
             );
           })}
