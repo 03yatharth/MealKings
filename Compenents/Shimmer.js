@@ -1,5 +1,7 @@
 import { foods } from "../src/Constant";
 const Shimmer = () => {
+  // let uuid = self.crypto.randomUUID();
+  // console.log(uuid);
     return (
     <>
       <div className="shimmer">
@@ -20,7 +22,7 @@ const Shimmer = () => {
           <div className="meals">
             {foods.map((e) => {
               return (
-                <div className="foodCard">
+                <div key={self.crypto.randomUUID()} className="foodCard">
                   <img
                     src={
                       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" +
@@ -35,7 +37,7 @@ const Shimmer = () => {
           
           {
             Array(18).fill("").map(()=>{
-              return <div className="shimmerCard"></div>
+              return <div key = {self.crypto.randomUUID()} className="shimmerCard"></div>
             })
           }
           

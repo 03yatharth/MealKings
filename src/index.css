@@ -214,3 +214,8 @@
     justify-content: center;
     flex-direction: column;
 }
+.btn{
+    height: 3vh;
+    width: 7vw;
+    background: yellow;
+}

@@ -9,7 +9,7 @@ const Obj = ({ props }) => {
         <div className="head">
           <div className="detail">
             {props.map((e) => {
-              return <div>{e.info.join("\n")}</div>;
+              return <div key={self.crypto.randomUUID()}>{e.info.join("\n")}</div>;
             })}
           </div>
         </div>

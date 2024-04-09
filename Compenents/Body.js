@@ -24,7 +24,7 @@ const Body = () => {
     );
     const json = await data.json();
     const fetchRestaurant =
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     SetAllRestaurantData(fetchRestaurant);
     SetFillteredRestaurantData(fetchRestaurant);
   }
@@ -56,7 +56,7 @@ const Body = () => {
         <div className="meals">
           {foods.map((e) => {
             return (
-              <div className="foodCard">
+              <div key={self.crypto.randomUUID()} className="foodCard">
                 <img
                   src={
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" +
@@ -73,13 +73,13 @@ const Body = () => {
         <div className="restaurant">
           {fillteredRestaurantData.map((e) => {
             return (
-              <div className="restaurantCard">
+              <div key={e.info.id} className="restaurantCard">
                 
                 <Link to = {"/restaurant/"+e.info.id}  className="link">
                 <img
                   src={
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-                    e.info.cloudinaryImageId
+                    e?.info?.cloudinaryImageId
                   }
                   alt="image"
                 ></img>
