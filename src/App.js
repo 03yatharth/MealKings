@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
 import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
-import Header from "../Compenents/Header";
-import Body from "../Compenents/Body";
-import Footer from "../Compenents/Footer"
-import About from "../Compenents/About"
-import Contact from "../Compenents/Contact"
-import Restaurant from "../Compenents/Restaurant";
+import Header from "../src/Compenents/Header";
+import Body from "../src/Compenents/Body";
+import Footer from "../src/Compenents/Footer"
+import About from "../src/Compenents/About"
+import Contact from "../src/Compenents/Contact"
+import Restaurant from "../src/Compenents/Restaurant";
 
 const AppLayout = ()=>{
     return (<>

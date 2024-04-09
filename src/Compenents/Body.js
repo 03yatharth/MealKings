@@ -1,4 +1,4 @@
-import { foods } from "../src/Constant";
+import { foods } from "../Constant";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -31,12 +31,13 @@ const Body = () => {
 
   return (fillteredRestaurantData.length===0)?<Shimmer/> : (
     <>
-      <div className="body">
-        <div className="searchField">
+      <div className="flex flex-col justify-items-center">
+        <div className="m-auto ">
           <input
+
             type="search"
             placeholder="Search"
-            className="searchBar"
+            className="border-black border-2 rounded-xl p-1"
             value={inputText}
             onChange={(e) => {
               SetInputText(e.target.value);
@@ -45,7 +46,7 @@ const Body = () => {
           <input
             type="button"
             value={"Search"}
-            className="searchBtn"
+            className="border-black border-2 w-20 mx-2 rounded-xl p-1"
             onClick={(e) => {
               const data = filterData(inputText, allRestaurantData);
               SetFillteredRestaurantData(data);
@@ -53,15 +54,16 @@ const Body = () => {
           ></input>
         </div>
 
-        <div className="meals">
+        <div className="flex p-2 ">
           {foods.map((e) => {
             return (
-              <div key={self.crypto.randomUUID()} className="foodCard">
+              <div  key={self.crypto.randomUUID()} >
                 <img
                   src={
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" +
                     e.imageId
                   }
+                  className="h-24 w-48 object-cover shadow-lg"
                   alt="text"
                 ></img>
               </div>
@@ -70,23 +72,24 @@ const Body = () => {
         </div>
 
         
-        <div className="restaurant">
+        <div className="flex flex-wrap m-2 p-2 justify-evenly">
           {fillteredRestaurantData.map((e) => {
             return (
-              <div key={e.info.id} className="restaurantCard">
+              <div key={e.info.id}  className="h-44 w-48 p-2 m-3 shadow-lg ">
                 
-                <Link to = {"/restaurant/"+e.info.id}  className="link">
+                <Link to = {"/restaurant/"+e.info.id} >
                 <img
                   src={
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
                     e?.info?.cloudinaryImageId
                   }
+                  className="w-48 h-24 object-cover"
                   alt="image"
                 ></img>
                 </Link>
                 
                 <Link to = {"/restaurant/"+e.info.id}  className="link">
-                <h4>{e.info.name}</h4>
+                <h4 className="text-md font-bol text-wrap">{e.info.name}</h4>
                 <h5>{e.info.locality}</h5>
                 </Link>
               </div>

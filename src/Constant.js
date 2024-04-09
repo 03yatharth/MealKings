@@ -1,26 +1,26 @@
 export const CompanyInfo = [
-  {
-    name: "Company",
-    info: [
+
+    {name: "Company"},
+    {info: [
       "About",
       "Careers",
       "Team",
       "Swiggy One",
       "Swiggy Instamart",
       "Swiggy Genie",
-    ],
-  },
+    ]}
+
 ];
 export const ContactInfo = [
   {
-    name: "Contact us",
-    info: ["Help & Support", "Partner with us", "Ride with us"],
+    name: "Contact us"},
+    {info: ["Help & Support", "Partner with us", "Ride with us"],
   },
 ];
 export const DeliverInfo = [
   {
-    name: "We deliver to",
-    info: ["Bangalore", "Gurgaon", "Hyderabad", "Delhi", "Mumbai", "Pune"],
+    name: "We deliver to"},
+    {info: ["Bangalore", "Gurgaon", "Hyderabad", "Delhi", "Mumbai", "Pune"],
   },
 ];
 export const foods = [

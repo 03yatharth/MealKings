@@ -20,35 +20,35 @@ const Restaurant =()=>{
     }
     return (restaurant.length===0)?(<Shimmer/>):(
         <>
-            <div className="menu">
+            <div className="flex justify-evenly m-auto border-orange-500 border-b-2 border-t-2 py-4 mb-4">
                     
-                <div className="restaurantDetail">
+                <div className="mr-4">
                     
                        {
-                        <img className="img" alt="image" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+restaurant?.data?.cards[2].card.card.info.cloudinaryImageId}></img>
+                        <img className="w-96 h-56 object-cover" alt="image" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+restaurant?.data?.cards[2].card.card.info.cloudinaryImageId}></img>
                        }        
                         <div className="restaurantDetail">     
-                            <h3>{restaurant?.data?.cards[2]?.card?.card?.info?.name}</h3>
-                            <p>{restaurant?.data?.cards[2]?.card?.card?.info?.areaName}</p>
-                            <p>{restaurant?.data?.cards[2]?.card?.card?.info?.locality}</p>
-                            <p>{restaurant?.data?.cards[2]?.card?.card?.info?.avgRating}</p>
+                            <p className="text-xl">{restaurant?.data?.cards[2]?.card?.card?.info?.name}</p>
+                            <p>Area : {restaurant?.data?.cards[2]?.card?.card?.info?.areaName}</p>
+                            <p>locality : {restaurant?.data?.cards[2]?.card?.card?.info?.locality}</p>
+                            <p>Rating {restaurant?.data?.cards[2]?.card?.card?.info?.avgRating}</p>
                         </div>
                 </div>
+                <div className="flex flex-col ml-4">
                 {
                     restaurant?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map((e)=>{
                         return (
                             <>
-                                <div className="menuItem">
                                     <p>
                                         <li key={e?.card?.info?.id}>
                                             {e?.card?.info?.name}
                                         </li>
                                     </p>
-                                </div>
                             </>
                         )
                     })
                 }
+                </div>
             </div>
         </>
     )
