@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const filterData = (inputText, allRestaurantData) => {
   return allRestaurantData.filter((allRestaurantData) =>
-    allRestaurantData.info.name.includes(inputText)
+    allRestaurantData.info.name.toLowerCase().includes(inputText.toLowerCase())
   );
 };
 
