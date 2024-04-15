@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import { ContactInfo } from "../Constant";
 import { CompanyInfo } from "../Constant";
 import { DeliverInfo } from "../Constant";
+import ThemeContext from "./ThemeContext";
 const Obj = ({ props }) => {
   return (
     <div className="flex w-44 h-max flex-col items-center justify-center mb-3 ">
@@ -12,9 +14,10 @@ const Obj = ({ props }) => {
   );
 };
 const Footer = () => {
+  const {theme} =useContext(ThemeContext)
   return (
     <>
-      <div className="flex justify-around">
+      <div className={"flex justify-around " + theme.color1}>
         <Obj props={ContactInfo} />
         <Obj props={CompanyInfo} />
         <Obj props={DeliverInfo} />

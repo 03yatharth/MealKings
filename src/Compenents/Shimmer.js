@@ -1,7 +1,5 @@
 import { foods } from "../Constant";
 const Shimmer = () => {
-  // let uuid = self.crypto.randomUUID();
-  // console.log(uuid);
     return (
     <>
       <div className="flex flex-col justify-items-center">
@@ -15,7 +13,7 @@ const Shimmer = () => {
             <input
               type="button"
               value={"Search"}
-              className="border-black border-2 w-20 mx-2 rounded-xl p-1"
+              className="border-black border-2 w-20 mx-2 rounded-xl p-1 bg-white"
             ></input>
           </div>
   

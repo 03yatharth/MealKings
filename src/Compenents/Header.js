@@ -1,10 +1,31 @@
 import { Link } from "react-router-dom";
+import ThemeContext from "./ThemeContext";
+import { useContext, useState } from "react";
+
 const Header =()=>{
+    const {theme,setTheme}=useContext(ThemeContext)
+    const [btn,setBtn]=useState("dark theme")
     return(
         <>
-            <div className="flex my-2 justify-between items-center  ">
-                <div className="w-60">
-                    <img className="w-28 h-28" src="https://th.bing.com/th/id/OIP.khpSr5IBo1NAqcyrZU1cJAHaHa?rs=1&pid=ImgDetMain" alt="logo"></img>
+            <div className={"flex mb-2 justify-between items-center "+theme.color1 }>
+                <div className="flex">
+                    <p className="bg-slate-100  border border-black rounded px-3 py-1 mx-1">Log in</p>                
+                    <button onClick={()=>{ 
+                        (btn==="dark theme")?
+                        (setBtn("light theme"),
+                        setTheme({
+                            color1:"bg-gray-200",
+                            color2:"bg-slate-400"
+                        })
+                    )
+                        :
+                        (setBtn("dark theme"),
+                        setTheme({
+                            color1:"bg-yellow-100",
+                            color2:"bg-yellow-200"
+                        }))
+                            
+                    }} className="bg-slate-100 border border-black rounded px-3 py-1 mx-">{btn}</button>                
                 </div>
                 <div className="flex w-60 justify-center">
                     <h1 className="text-2xl">MEAL KINGS</h1>

@@ -1,7 +1,8 @@
 import { foods } from "../Constant";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import ThemeContext from "./ThemeContext";
 
 const filterData = (inputText, allRestaurantData) => {
   return allRestaurantData.filter((allRestaurantData) =>
@@ -13,6 +14,7 @@ const Body = () => {
   const [inputText, SetInputText] = useState("");
   const [allRestaurantData, SetAllRestaurantData] = useState([]);
   const [fillteredRestaurantData, SetFillteredRestaurantData] = useState([]);
+  const {theme}=useContext(ThemeContext)
 
   useEffect(() => {
     getRestaurant();
@@ -46,15 +48,16 @@ const Body = () => {
           <input
             type="button"
             value={"Search"}
-            className="border-black border-2 w-20 mx-2 rounded-xl p-1"
+            className="border-black border-2 w-20 mx-2 rounded-xl p-1 bg-white m-2"
             onClick={(e) => {
               const data = filterData(inputText, allRestaurantData);
               SetFillteredRestaurantData(data);
             }}
           ></input>
         </div>
+        
 
-        <div className="flex p-2 ">
+        <div className={"flex p-2 "+theme.color1}>
           {foods.map((e) => {
             return (
               <div  key={self.crypto.randomUUID()} >
@@ -63,7 +66,7 @@ const Body = () => {
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" +
                     e.imageId
                   }
-                  className="h-24 w-48 object-cover shadow-lg"
+                  className="h-24 w-48 object-cover shadow-lg "
                   alt="text"
                 ></img>
               </div>
@@ -75,7 +78,7 @@ const Body = () => {
         <div className="flex flex-wrap m-2 p-2 justify-evenly">
           {fillteredRestaurantData.map((e) => {
             return (
-              <div key={e.info.id}  className="h-44 w-48 p-2 m-3 shadow-lg ">
+              <div key={e.info.id}  className={"h-44 w-48 p-2 m-3 shadow-lg "+theme.color1}>
                 
                 <Link to = {"/restaurant/"+e.info.id} >
                 <img
