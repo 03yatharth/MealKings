@@ -5,7 +5,7 @@ import Header from "../src/Compenents/Header";
 import Body from "../src/Compenents/Body";
 import Footer from "../src/Compenents/Footer"
 import About from "../src/Compenents/About"
-import Contact from "../src/Compenents/Contact"
+import Cart from "../src/Compenents/Cart"
 import Restaurant from "../src/Compenents/Restaurant";
 import ThemeContext from "./Compenents/ThemeContext";
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         children:[
             {path:"/",element:<Body />},
             {path:"/about",element:<About/>},
-            {path:"/contact",element:<Contact/>},
+            {path:"/Cart",element:<Cart/>},
             {path:"/restaurant/:resId",element:<Restaurant/>}
         ],
         

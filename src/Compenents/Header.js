@@ -30,10 +30,12 @@ const Header =()=>{
                 <div className="flex w-60 justify-center">
                     <h1 className="text-2xl">MEAL KINGS</h1>
                 </div>
-                <div className="flex justify-evenly mr-4  w-60">
+                <div className="flex justify-evenly mr-4 ">
                     <h2 className="p-2 text-xl  hover:text-orange-500"><Link to={"/"} >HOME</Link></h2>
                     <h2 className="p-2 text-xl  hover:text-orange-500"><Link to={"/about"} >ABOUT</Link></h2>
-                    <h2 className="p-2 text-xl hover:text-orange-500"><Link to={"/contact"} >CONTACT</Link></h2>
+                    <h2 className="p-2 text-xl  hover:text-orange-500"><Link to={"/cart"} >CART 
+                        <p className="text-sm">0-items</p>
+                    </Link></h2>
                 </div>
             </div>
         </>
