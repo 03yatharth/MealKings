@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import ThemeContext from "./ThemeContext";
 import { useContext, useState } from "react";
+import { useSelector } from "react-redux";
+import {store}  from "../Utils/store";
 
 const Header =()=>{
     const {theme,setTheme}=useContext(ThemeContext)
     const [btn,setBtn]=useState("dark theme")
+const cartSlice=useSelector((store)=>store.cart.items)
     return(
         <>
             <div className={"flex mb-2 justify-between items-center "+theme.color1 }>
@@ -34,7 +37,7 @@ const Header =()=>{
                     <h2 className="p-2 text-xl  hover:text-orange-500"><Link to={"/"} >HOME</Link></h2>
                     <h2 className="p-2 text-xl  hover:text-orange-500"><Link to={"/about"} >ABOUT</Link></h2>
                     <h2 className="p-2 text-xl  hover:text-orange-500"><Link to={"/cart"} >CART 
-                        <p className="text-sm">0-items</p>
+                        <p className="text-sm">{cartSlice.length} items</p>
                     </Link></h2>
                 </div>
             </div>

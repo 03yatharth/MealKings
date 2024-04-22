@@ -1,4 +1,4 @@
-import { foods } from "../Constant";
+import { foods } from "../Utils/Constant";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";

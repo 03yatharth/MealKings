@@ -1,4 +1,4 @@
-import { foods } from "../Constant";
+import { foods } from "../Utils/Constant";
 const Shimmer = () => {
     return (
     <>

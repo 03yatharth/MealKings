@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { ContactInfo } from "../Constant";
-import { CompanyInfo } from "../Constant";
-import { DeliverInfo } from "../Constant";
+import { ContactInfo } from "../Utils/Constant";
+import { CompanyInfo } from "../Utils/Constant";
+import { DeliverInfo } from "../Utils/Constant";
 import ThemeContext from "./ThemeContext";
 const Obj = ({ props }) => {
   return (
