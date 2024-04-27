@@ -18,13 +18,13 @@ const AppLayout = ()=>{
     })
     return (<>
         <Provider store={store}>
-        <ThemeContext.Provider value={{theme:theme,setTheme:setTheme}}>
-            <div className={ "p-0 m-0 "+theme.color2}>
-            <Header />
-            <Outlet />
-            <Footer />
-            </div>
-        </ThemeContext.Provider>
+                <ThemeContext.Provider value={{theme:theme,setTheme:setTheme}}>
+                    <div className={ "p-0 m-0 "+theme.color2}>
+                    <Header />
+                    <Outlet />
+                    <Footer />
+                    </div>
+                </ThemeContext.Provider>
         </Provider>
     </>)
 }

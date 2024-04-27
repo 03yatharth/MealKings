@@ -10,7 +10,7 @@ const Header =()=>{
 const cartSlice=useSelector((store)=>store.cart.items)
     return(
         <>
-            <div className={"flex mb-2 justify-between items-center "+theme.color1 }>
+            <div className={"flex mb-2 justify-between  items-center "+theme.color1 }>
                 <div className="flex">
                     <p className="bg-slate-100  border border-black rounded px-3 py-1 mx-1">Log in</p>                
                     <button onClick={()=>{ 

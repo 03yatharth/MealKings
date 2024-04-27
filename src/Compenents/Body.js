@@ -31,7 +31,7 @@ const Body = () => {
     SetFillteredRestaurantData(fetchRestaurant);
   }
 
-  return (fillteredRestaurantData.length===0)?<Shimmer/> : (
+  return (fillteredRestaurantData?.length===0)?<Shimmer/> : (
     <>
       <div className="flex flex-col justify-items-center">
         <div className="m-auto ">
@@ -76,7 +76,7 @@ const Body = () => {
 
         
         <div className="flex flex-wrap m-2 p-2 justify-evenly">
-          {fillteredRestaurantData.map((e) => {
+          {fillteredRestaurantData?.map((e) => {
             return (
               <div key={e.info.id}  className={"h-44 w-48 p-2 m-3 shadow-lg "+theme.color1}>
                 
