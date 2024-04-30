@@ -2,7 +2,7 @@ import { foods } from "../Utils/Constant";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../Utils/Context/ThemeContext";
 
 const filterData = (inputText, allRestaurantData) => {
   return allRestaurantData.filter((allRestaurantData) =>

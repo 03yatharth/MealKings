@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useContext, useState } from "react";
-import { store } from "../Utils/store";
-import { addItem, removeItem, clearItem } from "../Utils/cartSlice";
+import { store } from "../Utils/ReduxStore/store";
+import { addItem, removeItem, clearItem } from "../Utils/ReduxStore/cartSlice";
 
 const Cart = () => {
   const cartSlice = useSelector((store) => store.cart.items);
@@ -21,7 +21,7 @@ const Cart = () => {
       >
         Clear Cart
       </button>
-      <div >
+      <div>
         {console.log(cartSlice)}
         {[...new Set(cartSlice)].map((e) => {
           return (
@@ -42,8 +42,7 @@ const Cart = () => {
                     {e?.card?.info?.description?.length > 0 ? (
                       e?.card?.info?.description?.length > 215 ? (
                         <p className="text-sm">
-                          {e?.card?.info?.description.slice(0, 215)+"..."} 
-                          
+                          {e?.card?.info?.description.slice(0, 215) + "..."}
                         </p>
                       ) : (
                         <p className="text-sm">{e?.card?.info?.description}</p>

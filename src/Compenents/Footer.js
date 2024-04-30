@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ContactInfo } from "../Utils/Constant";
 import { CompanyInfo } from "../Utils/Constant";
 import { DeliverInfo } from "../Utils/Constant";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../Utils/Context/ThemeContext";
 const Obj = ({ props }) => {
   return (
     <div className="flex w-44 h-max flex-col items-center justify-center mb-3 ">
