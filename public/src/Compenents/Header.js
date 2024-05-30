@@ -35,11 +35,11 @@ const Header = () => {
   return (
     <>
       <div
-        className={"flex mb-2 justify-between  items-center " + theme.color1}
+        className={"max-w-full overflow-hidden flex mb-2 justify-between  items-center " + theme.color1}
       >
-        <div className="flex">
+        <div className="flex items-center justify-center" >
           {(userSlice!==null) ? (
-            <Link to={"/home"}>
+            <Link to={"/home"} >
               <button
                 onClick={() => {
                   setIsLogIn(true);
@@ -53,7 +53,7 @@ const Header = () => {
                     });
                   dispatch(removeUser());
                 }}
-                className="bg-slate-100  border border-black rounded px-3 py-1 mx-1"
+                className="bg-slate-100  border border-black rounded w-max px-1 py-1 h-max mx-1 text-[10px] sm:px-3 sm:py-1 sm:mx-1 sm:text-xl "
               >
                 Sign Out
               </button>
@@ -62,8 +62,8 @@ const Header = () => {
             <Link to={"/"}>
               <button
                 onClick={() => setIsLogIn(!isLogIn)}
-                className="bg-slate-100  border border-black rounded px-3 py-1 mx-1"
-              >
+                className="bg-slate-100  border border-black rounded w-max px-1 py-1 h-max mx-1 text-[10px] sm:px-3 sm:py-1 sm:mx-1 sm:text-xl "
+                >
                 Log in
               </button>
             </Link>
@@ -71,8 +71,8 @@ const Header = () => {
             <Link to={"/"}>
               <button
                 onClick={() => setIsLogIn(!isLogIn)}
-                className="bg-slate-100  border border-black rounded px-3 py-1 mx-1"
-              >
+                className="bg-slate-100  border border-black rounded w-max px-1 py-1 h-max mx-1 text-[10px] sm:px-3 sm:py-1 sm:mx-1 sm:text-xl "
+                >
                 Sign up
               </button>
             </Link>
@@ -91,27 +91,27 @@ const Header = () => {
                     color2: "bg-yellow-200",
                   }));
             }}
-            className="bg-slate-100 border border-black rounded px-3 py-1 mx-"
+            className="bg-slate-100 border border-black rounded w-max h-max mt-[3px] px-1 py-1 mx-1 text-[10px] sm:px-3 sm:py-1 sm:mx-1 sm:text-xl"
           >
             {btn}
           </button>
         </div>
-        <div className="flex w-60 justify-center">
-          <h1 className="text-2xl">MEAL KINGS</h1>
+        <div className="h-max flex w-60 justify-center">
+          <h1 className="px-0 py-0 text-sm sm:text-2xl">MEAL KINGS</h1>
         </div>
-        <div className="flex justify-evenly mr-4 ">
-          <h2 className="p-2 text-xl  hover:text-orange-500">
+        <div className="flex justify-evenly mr-1 sm:mr-4 ">
+          <p className="px-1 py-0 h-min text-[10px] sm:p-2 sm:text-xl  hover:text-orange-500">
             <Link to={"/home"}>HOME</Link>
-          </h2>
-          <h2 className="p-2 text-xl  hover:text-orange-500">
+          </p>
+          <p className="px-1 py-0 h-min text-[10px] sm:p-2 sm:text-xl  hover:text-orange-500">
             <Link to={"/about"}>ABOUT</Link>
-          </h2>
-          <h2 className="p-2 text-xl  hover:text-orange-500">
+          </p>
+          <p className="px-1 py-0 h-min text-[10px] sm:p-2 sm:text-xl  hover:text-orange-500">
             <Link to={"/cart"}>
               CART
-              <p className="text-sm">{cartSlice.length} items</p>
+              <p className="py-0 text-[10px] sm:text-sm">{cartSlice.length} items</p>
             </Link>
-          </h2>
+          </p>
         </div>
       </div>
     </>

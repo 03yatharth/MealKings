@@ -61,28 +61,28 @@ const Login = () => {
   };
   return (
     <div className="flex justify-center items-center bg-gradient-to-tl from-purple-900 to-blue-700 min-h-max w-full p-10 ">
-      <div className="rounded-lg flex flex-col items-center justify-evenly  bg-gradient-to-tl from-yellow-400 to-orange-400 shadow-lg m-auto  w-1/3 min-h-max p-6">
+      <div className="rounded-lg flex flex-col items-center justify-evenly  bg-gradient-to-tl from-yellow-400 to-orange-400 shadow-lg m-auto  w-3/2 sm:w-[40vw] md:w-1/3 min-h-max p-6">
         {isLogIn ? (
           <p className="font-bold text-3xl  text-white">This is login page</p>
         ) : (
           <p className="font-bold text-3xl text-white">This is sign up page</p>
         )}
 
-        <div className="my-5  flex flex-col items-center">
+        <div className="my-5 w-full flex flex-col items-center">
           <input
             ref={email}
-            className="my-1 bg-gradient-to-tl to-yellow-200 from-yellow-300 p-2"
+            className="my-1 sm:w-3/4 bg-gradient-to-tl to-yellow-200 from-yellow-300 p-2"
             type="text"
             placeholder="username"
           ></input>
           <input
             ref={password}
-            className="my-1 bg-gradient-to-tl to-yellow-200 from-yellow-300 p-2"
+            className="my-1 sm:w-3/4 bg-gradient-to-tl to-yellow-200 from-yellow-300 p-2"
             type="text"
             placeholder="password"
           ></input>
           <button
-            className="my-3 bg-gradient-to-tl to-yellow-200 from-yellow-300 rounded w-20 border border-black"
+            className="my-3 px-5 bg-gradient-to-tl to-yellow-200 from-yellow-300 rounded w-max border border-black"
             onClick={(e) => {
               handleOnClick();
             }}

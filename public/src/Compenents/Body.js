@@ -57,7 +57,7 @@ const Body = () => {
         </div>
         
 
-        <div className={"flex p-2 "+theme.color1}>
+        <div className={" flex p-2 "+theme.color1}>
           {foods.map((e) => {
             return (
               <div  key={self.crypto.randomUUID()} >
@@ -66,7 +66,7 @@ const Body = () => {
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" +
                     e.imageId
                   }
-                  className="h-24 w-48 object-cover shadow-lg "
+                  className="h-full object-cover shadow-lg "
                   alt="text"
                 ></img>
               </div>

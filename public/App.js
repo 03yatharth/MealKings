@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Header from "../src/Compenents/Header";
-import Body from "../src/Compenents/Body";
-import Footer from "../src/Compenents/Footer";
-import About from "../src/Compenents/About";
-import Cart from "../src/Compenents/Cart";
-import Restaurant from "../src/Compenents/Restaurant";
-import ThemeContext from "./Utils/Context/ThemeContext";
-import { store } from "./Utils/ReduxStore/store";
+import Header from "./src/Compenents/Header";
+import Body from "./src/Compenents/Body";
+import Footer from "./src/Compenents/Footer";
+import About from "./src/Compenents/About";
+import Cart from "./src/Compenents/Cart";
+import Restaurant from "./src/Compenents/Restaurant";
+import ThemeContext from "./src/Utils/Context/ThemeContext";
+import { store } from "./src/Utils/ReduxStore/store";
 import { Provider } from "react-redux";
-import Login from "./Compenents/Login";
-import IsLogInContext from "./Utils/Context/IsLogInContext";
+import Login from "./src/Compenents/Login";
+import IsLogInContext from "./src/Utils/Context/IsLogInContext";
 
 const AppLayout = () => {
   const [theme, setTheme] = useState({

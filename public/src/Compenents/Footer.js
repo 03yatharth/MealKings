@@ -5,10 +5,10 @@ import { DeliverInfo } from "../Utils/Constant";
 import ThemeContext from "../Utils/Context/ThemeContext";
 const Obj = ({ props }) => {
   return (
-    <div className="flex w-44 h-max flex-col items-center justify-center mb-3 ">
-      <h2 className="text-xl m-auto ">{props[0].name}</h2>
+    <div className="flex sm:w-44 w-[33vw] h-max flex-col items-center justify-center mb-3 ">
+      <p className="text-[5vw] sm:text-3xl  m-auto ">{props[0].name}</p>
         {props[1].info.map((e) => {
-          return <p className="m-auto " key={self.crypto.randomUUID()}>{e}</p>;
+          return <p className="m-auto text-[3vw] sm:text-xl " key={self.crypto.randomUUID()}>{e}</p>;
         })}
     </div>
   );

@@ -19,5 +19,12 @@
       "enabled": true
     },
     "singleProjectMode": true
+  },
+  "hosting": {
+    "site": "meal-kings-e2fa0",
+    "public": "public"
   }
+  
 }
+
+
