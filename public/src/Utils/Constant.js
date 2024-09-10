@@ -2,26 +2,38 @@ export const CompanyInfo = [
 
     {name: "Company"},
     {info: [
-      "About",
-      "Careers",
-      "Team",
-      "Swiggy One",
-      "Swiggy Instamart",
-      "Swiggy Genie",
+      {name:"About",key:1},
+      {name: "Careers",key:2},
+      {name: "Team",key:3},
+      {name:"Swiggy One",key:4},
+      {name: "Swiggy Instamart",key:5},
+      {name:"Swiggy Genie",key:6}
     ]}
-
 ];
 export const ContactInfo = [
   {
     name: "Contact us"},
-    {info: ["Help & Support", "Partner with us", "Ride with us"],
-  },
+    {info: [
+      // "Help & Support", "Partner with us", "Ride with us"
+      {name:"Help & Support",key:11},
+      {name: "Partner with us",key:12},
+      {name: "Ride with us",key:13},
+    ],
+  }
 ];
 export const DeliverInfo = [
   {
     name: "We deliver to"},
-    {info: ["Bangalore", "Gurgaon", "Hyderabad", "Delhi", "Mumbai", "Pune"],
+    {info: [
+      {name:"Bangalore",key:21},
+      {name: "Gurgaon",key:22},
+      {name: "Hyderabad",key:23},
+      {name:"Delhi",key:24},
+      {name: "Mumbai",key:25},
+      {name:"Pune",key:26}
+    ],
   },
+  
 ];
 export const foods = [
   {

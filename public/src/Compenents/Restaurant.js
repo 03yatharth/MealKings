@@ -44,19 +44,19 @@ const Restaurant = () => {
             ></img>
           }
           <div className="px-2 py-1 sm:p-0">
-            <p className="text-xl">
+            <div className="text-xl">
               {restaurant?.data?.cards[2]?.card?.card?.info?.name}
-            </p>
-            <p>
+            </div>
+            <div>
               Area : {restaurant?.data?.cards[2]?.card?.card?.info?.areaName}
-            </p>
-            <p>
+            </div>
+            <div>
               locality :{" "}
               {restaurant?.data?.cards[2]?.card?.card?.info?.locality}
-            </p>
-            <p>
+            </div>
+            <div>
               Rating {restaurant?.data?.cards[2]?.card?.card?.info?.avgRating}
-            </p>
+            </div>
           </div>
         </div>
         <div className="flex flex-col  m-auto w-4/5 sm:w-3/5 mt-1 ">
@@ -68,33 +68,33 @@ const Restaurant = () => {
                     className="flex justify-between rounded-lg overflow-hidden  w-full h-max m-1 bg-white"  key={self.crypto.randomUUID()}
                   >
                     <div className=" pl-2 w-4/5 text-gray-500" key={self.crypto.randomUUID()}>
-                      <p className="text-sm sm:text-xl text-[4vw] text-gray-600 bo font-semibold ">
+                      <div className="text-sm sm:text-xl text-[4vw] text-gray-600 bo font-semibold ">
                         {e?.card?.info?.name}
-                      </p>
+                      </div>
                       {e?.card?.info?.description?.length > 0 ? (
                         e?.card?.info?.description?.length > 173 ? (
                           <p className="text-[10px] sm:text-sm">
                             {e?.card?.info?.description.slice(0, 170)}...
                           </p>
                         ) : (
-                          <p className="text-[10px] sm:text-sm">
+                          <div className="text-[10px] sm:text-sm">
                             {e?.card?.info?.description}
-                          </p>)
+                          </div>)
                       ) : (
                         <></>
                       )}
                       {e?.card?.info?.ratings?.aggregatedRating?.rating > 0 ? (
-                        <p className="text-[13px] sm:text-md text-green-600 font-medium">
+                        <div className="text-[13px] sm:text-md text-green-600 font-medium">
                           Rating :{" "}
                           {e?.card?.info?.ratings?.aggregatedRating?.rating}
-                        </p>
+                        </div>
                       ) : (
                         <></>
                       )}
                       {e?.card?.info?.price > 0 ? (
-                        <p className="text-[13px] sm:text-md font-medium text-gray-500">
+                        <div className="text-[13px] sm:text-md font-medium text-gray-500">
                           {e?.card?.info?.price / 100} Rupees
-                        </p>
+                        </div>
                       ) : (
                         <></>
                       )}
@@ -133,13 +133,13 @@ const Restaurant = () => {
                           >
                             -
                           </button>
-                          <p className="flex justify-center bg-green-600 text-white   h-min w-1/3">
+                          <div className="flex justify-center bg-green-600 text-white   h-min w-1/3">
                             {
                               cartSlice.filter(
                                 (obj) => obj?.card?.info?.id === e.card.info.id
                               ).length
                             }
-                          </p>
+                          </div>
                           <button
                             className="flex justify-center bg-green-500 text-white   h-min w-1/3"
                             onClick={() => {

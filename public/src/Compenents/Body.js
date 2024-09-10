@@ -22,8 +22,7 @@ const Body = () => {
 
   async function getRestaurant() {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json();
     const fetchRestaurant =
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
@@ -60,7 +59,7 @@ const Body = () => {
         <div className={" flex p-2 "+theme.color1}>
           {foods.map((e) => {
             return (
-              <div  key={self.crypto.randomUUID()} >
+              <div  key={e.imageId} >
                 <img
                   src={
                     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" +

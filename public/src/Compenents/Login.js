@@ -63,9 +63,9 @@ const Login = () => {
     <div className="flex justify-center items-center bg-gradient-to-tl from-purple-900 to-blue-700 min-h-max w-full p-10 ">
       <div className="rounded-lg flex flex-col items-center justify-evenly  bg-gradient-to-tl from-yellow-400 to-orange-400 shadow-lg m-auto  w-3/2 sm:w-[40vw] md:w-1/3 min-h-max p-6">
         {isLogIn ? (
-          <p className="font-bold text-3xl  text-white">This is login page</p>
+          <div className="font-bold text-3xl  text-white">This is login page</div>
         ) : (
-          <p className="font-bold text-3xl text-white">This is sign up page</p>
+          <div className="font-bold text-3xl text-white">This is sign up page</div>
         )}
 
         <div className="my-5 w-full flex flex-col items-center">
@@ -89,11 +89,11 @@ const Login = () => {
           >
             Submit
           </button>
-          <p className="text-[#ff0000] font-semibold">{errorMessage}</p>
+          <div className="text-[#ff0000] font-semibold">{errorMessage}</div>
         </div>
         {!isLogIn ? (
           <div>
-            <p>Already have a account?</p>
+            <div>Already have a account?</div>
             <button
               className="font-semibold"
               onClick={() => {
@@ -105,7 +105,7 @@ const Login = () => {
           </div>
         ) : (
           <div>
-            <p>Don't have a account?</p>
+            <div>Don't have a account?</div>
             <button
               className="font-semibold"
               onClick={() => {

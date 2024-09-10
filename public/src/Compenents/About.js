@@ -5,7 +5,7 @@ const Section = ({ topic, description, isActive, onShow, onHide }) => {
   return (
     <>
       <div className={"border border-black m-4 p-4 " + theme.color1}>
-        <p className="m-auto text-xl">this page is dedicated {topic}</p>
+        <div className="m-auto text-xl">this page is dedicated {topic}</div>
         {isActive ? (
           <>
             <button
@@ -14,7 +14,7 @@ const Section = ({ topic, description, isActive, onShow, onHide }) => {
             >
               hide
             </button>
-            <p>{description}</p>
+            <div>{description}</div>
           </>
         ) : (
           <button

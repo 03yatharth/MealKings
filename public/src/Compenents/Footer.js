@@ -8,7 +8,8 @@ const Obj = ({ props }) => {
     <div className="flex sm:w-44 w-[33vw] h-max flex-col items-center justify-center mb-3 ">
       <p className="text-[5vw] sm:text-3xl  m-auto ">{props[0].name}</p>
         {props[1].info.map((e) => {
-          return <p className="m-auto text-[3vw] sm:text-xl " key={self.crypto.randomUUID()}>{e}</p>;
+          // console.log(e);
+          return <p className="m-auto text-[3vw] sm:text-xl " key={e.key}>{e.name}</p>;
         })}
     </div>
   );

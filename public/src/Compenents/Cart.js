@@ -10,17 +10,19 @@ const Cart = () => {
 
   return (
     <>
-      <p className="text-3xl flex justify-center mb-2 ">
+    <div className="flex items-center justify-around">
+      <p className="sm:text-3xl flex justify-center mb-2 md:text-3xl  ">
         Items added to cart are here
       </p>
       <button
-        className="bg-slate-100 border border-black relative left-[90vw] w-24 -top-8"
+        className="bg-slate-100 border border-black m-2 w-24"
         onClick={(e) => {
           dispatch(clearItem());
         }}
       >
         Clear Cart
       </button>
+    </div>
       <div>
         {console.log(cartSlice)}
         {[...new Set(cartSlice)].map((e) => {
@@ -32,7 +34,7 @@ const Cart = () => {
                 <></>
               ) : (
                 <div
-                  key={self?.crypto?.randomUUID()}
+                  key={e?.card?.info?.id}
                   className="flex justify-between shadow-2xl rounded-lg overflow-hidden w-3/4 h-max m-auto mb-1 bg-white"
                 >
                   <div className=" pl-2 w-4/5  text-gray-500">
